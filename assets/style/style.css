@@ -1,0 +1,117 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-blue);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+:root {
+    --light-gray: #c2bbc2;
+    --pink: #d64b5b;
+    --light-pink: #ce606c;
+    --dark-blue: #0e0d1b;
+    --yellow: #dca96c;
+}
+
+h1 {
+    color: white;
+    margin-top: 20vh;
+    text-align: center;
+}
+
+h1 span {
+    font-weight: 300;
+}
+
+.input-bar {
+    width: 50vw;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-bar input {
+    font-size: 1.1rem;
+    font-family: 'Montserrat';
+    border-radius: 1rem;
+    margin-right: 1rem;
+    background: var(--dark-blue);
+    border: 1px solid var(--light-gray);
+    color: white;
+    width: 100%;
+    padding: .5rem .75rem;
+    outline: none;
+}
+
+.input-bar button {
+    padding: calc(.5rem + 2px) 1.5rem;
+    outline: none;
+    color: white;
+    background: var(--light-pink);
+    font-size: 1.1rem;
+    font-family: 'Montserrat';
+    border-radius: 1rem;
+    transition: .3s ease;
+    cursor: pointer;
+    width: fit-content;
+    border: 0;
+}
+
+.input-bar button:hover {
+    background: var(--pink);
+}
+
+.input-bar button:disabled,
+.input-bar button[disabled] {
+    background: var(--dark-blue);
+    border: 1px solid var(--light-gray);
+    padding: .5rem 1.5rem;
+}
+
+.player__wrapper {
+    width: 50vw;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.no-video .my-video {
+    opacity: 0;
+}
+
+.no-video::after {
+    background: #000000a5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: white;
+    font-family: 'Montserrat';
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    content: 'Nepřehrává se žádné video';
+    z-index: 10;
+}
+
+.my-video {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    margin: auto;
+    transition: .3s ease;
+}

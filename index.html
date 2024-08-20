@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCreative | HLS Player</title>
+    <link rel="shortcut icon" href="https://www.dcreative.cz/assets/img/logo_white.png" type="image/png">
+    <link rel="stylesheet" href="./assets/style/font.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+</head>
+
+<body>
+    <h1>HLS Player <span>by Daniel Cvejn</span></h1>
+    <div class="input-bar">
+        <input type="text" placeholder="Odkaz na přehrání" class="url-input" required>
+        <button type="submit" class="btn-play">Přehrát</button>
+    </div>
+    <div class="player__wrapper no-video">
+        <video class="my-video" controls id="hls" autoplay></video>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script>
+        const player = new Plyr('#hls');
+    </script>
+</body>
+
+</html>
