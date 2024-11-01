@@ -115,3 +115,58 @@ h1 span {
     margin: auto;
     transition: .3s ease;
 }
+
+.plyr {
+    font-family: 'Montserrat';
+}
+
+.plyr-pause-play {
+    position: absolute;
+    left: 10px;
+}
+
+.plyr-live {
+    position: absolute !important;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+    width: 68px !important;
+    height: 28px;
+    background: red;
+    color: white;
+    font-size: .75rem !important;
+    font-weight: bold !important;
+    border-radius: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.plyr-live span {
+    position: absolute;
+    top: 50%;
+    right: .75rem;
+    transform: translateY(-50%);
+    line-height: normal;
+}
+
+.plyr-live:hover, .plyr-live:focus {
+    background: var(--pink) !important;
+}
+
+.plyr-live::before {
+    content: '';
+    position: absolute;
+    left: .75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: .5rem;
+    height: .5rem;
+    background: white;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {opacity: 1;}
+    33%, 66% {opacity: 0;}
+}
